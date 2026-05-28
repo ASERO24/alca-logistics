@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALCA Logistics</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#D4AF37',secondary:'#000000'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+background-color: #000000;
+color: #ffffff;
+}
+.gold-text {
+color: #D4AF37;
+}
+.gold-border {
+border-color: #D4AF37;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #D4AF37;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.hero-section {
+background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://readdy.ai/api/search-image?query=professional%20logistics%20warehouse%20with%20shipping%20containers%2C%20cargo%20ships%20in%20the%20background%2C%20dark%20atmosphere%20with%20golden%20lighting%20accents%2C%20premium%20quality%20logistics%20operations%2C%20dramatic%20lighting%2C%20professional%20photography&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.service-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+input:focus, textarea:focus {
+outline: none;
+border-color: #D4AF37;
+}
+</style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="bg-secondary py-4 px-6 md:px-12 fixed w-full z-50">
+<div class="container mx-auto flex justify-between items-center">
+<div class="flex items-center">
+<img src="https://static.readdy.ai/image/fbedf968bd2357570a91c0420d071efd/c0de58b508b678cdb641a49e3402e74f.png" alt="ALCA Logistics" class="h-20">
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#home" class="nav-link text-white hover:text-primary/80 font-medium">Home</a>
+<a href="#about" class="nav-link text-white hover:text-primary/80 font-medium">About Us</a>
+<a href="#services" class="nav-link text-white hover:text-primary/80 font-medium">Services</a>
+<a href="#values" class="nav-link text-white hover:text-primary/80 font-medium">Values</a>
+<a href="#contact" class="nav-link text-white hover:text-primary/80 font-medium">Contact</a>
+<a href="https://alca-customer-app.netlify.app" target="_blank" class="bg-primary text-secondary px-6 py-2 rounded-button font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap inline-block">
+Book Now
+</a>
+
+</nav>
+<div class="md:hidden flex items-center">
+<button class="text-white w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section min-h-screen flex items-center pt-20">
+<div class="container mx-auto px-6 md:px-12 py-20 w-full">
+<div class="max-w-3xl">
+<h1 class="text-primary text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">FROM YOUR DOORSTEP TO THE WORLD</h1>
+<p class="text-white text-lg md:text-xl mb-8 max-w-2xl">ALCA Logistics provides premium domestic and global shipping solutions with unmatched reliability and efficiency. Your cargo, our commitment.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#services">
+<button class="bg-primary text-secondary px-8 py-3 !rounded-button font-semibold hover:bg-primary/90 transition whitespace-nowrap">Our Services</button></a>
+<a href="#contact">
+<button class="bg-primary text-secondary px-8 py-3 !rounded-button font-semibold hover:bg-primary/90 transition whitespace-nowrap">Contact Us</button></a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-20 bg-black">
+<div class="container mx-auto px-6 md:px-12">
+<div class="text-center mb-16">
+<h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">About ALCA Logistics</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+<p class="text-white text-lg max-w-3xl mx-auto">With over 15 years of industry experience, we've established ourselves as a leader in global logistics solutions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="text-primary text-2xl font-bold mb-6">Our Story</h3>
+<p class="text-white mb-4">Founded in 2010, ALCA Logistics began as a small regional shipping company with a vision to revolutionize the logistics industry through innovation and exceptional service.</p>
+<p class="text-white mb-4">Today, we operate in over 120 countries, with a fleet of modern vessels and a network of strategic partnerships that allow us to offer seamless logistics solutions worldwide.</p>
+<p class="text-white">Our team of 500+ logistics experts works tirelessly to ensure your cargo reaches its destination safely, on time, and in perfect condition.</p>
+<div class="mt-8 grid grid-cols-2 gap-6">
+<div class="border border-primary/30 p-6 !rounded-lg">
+<div class="w-12 h-12 bg-primary/10 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-ship-line text-primary ri-xl"></i>
+</div>
+<h4 class="text-primary text-xl font-semibold mb-2">200+</h4>
+<p class="text-white/80">Local and Intenational Transaction</p>
+</div>
+<div class="border border-primary/30 p-6 !rounded-lg">
+<div class="w-12 h-12 bg-primary/10 !rounded-full flex items-center justify-center mb-4">
+<i class="ri-user-star-line text-primary ri-xl"></i>
+</div>
+<h4 class="text-primary text-xl font-semibold mb-2">100+</h4>
+<p class="text-white/80">Professional Staff</p>
+</div>
+</div>
+</div>
+<div class="h-full">
+<img src="https://images.pexels.com/photos/269077/pexels-photo-269077.jpeg?cs=srgb&dl=pexels-pixabay-269077.jpg&fm=jpg" alt="Company Building" class="w-full h-auto rounded-lg shadow-lg">
+</div>
+</div>
+<div class="mt-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-primary text-2xl font-bold mb-6">Our Mission</h3>
+<p class="text-white">The development and implementation of strategies and programs that will ensure:</p>
+<ul class="text-white mt-4 space-y-2">
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+<span>Professionalism in operations</span>
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+<span>Maximum Utilization Competitive Advantages</span>
+</li>
+<li class="flex items-center">
+<i class="ri-checkbox-circle-line text-primary mr-2"></i>
+<span>Successful road transportation and logistics service</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-primary text-2xl font-bold mb-6">Our Vision</h3>
+<p class="text-white">As a leading global provider of supply chain and logistics solutions, we strive to be recognized as a professional and innovative company.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-black/90">
+<div class="container mx-auto px-6 md:px-12">
+<div class="text-center mb-16">
+<h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Core Services</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+<p class="text-white text-lg max-w-3xl mx-auto">Comprehensive logistics solutions tailored to meet your specific business needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="service-card bg-black border border-primary/30 p-8 !rounded-lg">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-ship-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Ocean Freight</h3>
+<p class="text-white/80 mb-4">Through strong relationships with major, trustworthy, and efficient maritime carriers, ALCA provides competitive and flexible services, and manages large amounts of traffic even during peak season, offering guaranteed cargo spaces at affordable rates. Our experience and global presence allows us to handle many of the major routes in the world along with deep knowledge of customs and international traffic regulations.</p>
+<a href="#" class="inline-flex items-center text-primary hover:text-primary/80">
+</a>
+</div>
+<div class="service-card bg-black border border-primary/30 p-8 !rounded-lg">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-plane-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Air Freight</h3>
+<p class="text-white/80 mb-4">•   A wide selection of first-class airlines provides excellent transportation connections as well as tracking our shipments continuously.</p>
+
+<p class="text-white/80 mb-4">•   You can count on our air freight products to stay on schedule, and keep your budget in check.</p>
+<p class="text-white/80 mb-4">•   Whether your shipment needs to be delivered quickly or you have large cargo to ship.</p>
+<p class="text-white/80 mb-4">•   Our service types are varied so that everyone can find something that suits their needs and requirements.</p>
+<a href="#" class="inline-flex items-center text-primary hover:text-primary/80">
+</a>
+</div>
+<div class="service-card bg-black border border-primary/30 p-8 !rounded-lg">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-truck-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Road Transport</h3>
+<p class="text-white/80 mb-4">   We offer domestic and cross-border trucking services as well as correspondents based in strategic locations so you can ship your goods along all your business routes. Dedicated to providing door-to-door services and tailored solutions to clients, ALCA always adheres to the highest standards of quality and complies with environmental regulations.</p>
+<a href="#" class="inline-flex items-center text-primary hover:text-primary/80">
+</a>
+</div>
+<div class="service-card bg-black border border-primary/30 p-8 !rounded-lg">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-store-3-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Warehousing & Storage</h3>
+<p class="text-white/80 mb-4">•   With an extensive network of warehousing solutions, we cater to a diverse range of clients. In addition to shared and dedicated warehousing, we offer medical equipment storage to meet the unique requirements of our clients across several industries.
+</p>
+<p class="text-white/80 mb-4">•   Moreover, we offer businesses storage and logistics solutions for dangerous goods and hazardous chemicals/ materials that have dangerous elements.
+</p>
+<a href="#" class="inline-flex items-center text-primary hover:text-primary/80">
+</a>
+</div>
+<div class="service-card bg-black border border-primary/30 p-8 !rounded-lg">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-file-list-3-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">High Value Logistics</h3>
+<p class="text-white/80 mb-4">•   Our cargo services include transporting document’s, art, electronics, pharmaceuticals, clothing’s and other valuables or parcels. Additionally, we offer insurance.</p>
+<p class="text-white/80 mb-4">•   Customised valuables solutions include: • Private Charter • Airline Freight • Ground Haul • Tactical Support.</p>
+<a href="#" class="inline-flex items-center text-primary hover:text-primary/80">
+</a>
+</div>
+<div class="service-card bg-black border border-primary/30 p-8 !rounded-lg">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mb-6">
+<i class="ri-route-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Supply Chain Solutions</h3>
+<p class="text-white/80 mb-4">End-to-end supply chain management tailored to your business. We optimize your logistics operations for maximum efficiency and cost-effectiveness.</p>
+<a href="#" class="inline-flex items-center text-primary hover:text-primary/80"></a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Values Section -->
+<section id="values" class="py-20 bg-black" style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://readdy.ai/api/search-image?query=abstract%20geometric%20pattern%20with%20gold%20and%20black%20colors%2C%20luxury%20design%20elements%2C%20professional%20corporate%20background%2C%20subtle%20texture%2C%20elegant%20and%20sophisticated&width=1920&height=1080&seq=3&orientation=landscape'); background-size: cover; background-position: center;">
+<div class="container mx-auto px-6 md:px-12">
+<div class="text-center mb-16">
+<h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+<p class="text-white text-lg max-w-3xl mx-auto">The principles that guide our operations and define our corporate culture.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-black/80 border border-primary/30 p-8 !rounded-lg text-center">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-award-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Safety and Accountability </h3>
+<p class="text-white/80">The safety of our employees and clients is our number one priority as a responsible and accountable company.</p>
+</div>
+<div class="bg-black/80 border border-primary/30 p-8 !rounded-lg text-center">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-shield-check-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Integrity</h3>
+<p class="text-white/80">rust is what we build our reputation on. Continually promoting honesty, integrity, and 
+reliability, we adhere to the highest moral and ethical standards.</p>
+</div>
+<div class="bg-black/80 border border-primary/30 p-8 !rounded-lg text-center">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-lightbulb-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Innovation</h3>
+<p class="text-white/80">Our company challenges the standard ways of doing things in the logistics industry 
+and develops new and innovative ways to meet the needs of our clients.</p>
+</div>
+<div class="bg-black/80 border border-primary/30 p-8 !rounded-lg text-center">
+<div class="w-16 h-16 bg-primary/10 !rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-recycle-line text-primary ri-2x"></i>
+</div>
+<h3 class="text-primary text-xl font-bold mb-4">Sustainability</h3>
+<p class="text-white/80">We are committed to environmentally responsible practices that minimize our ecological footprint.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Global Presence Section -->
+<section class="py-20 bg-black">
+<div class="container mx-auto px-6 md:px-12">
+<div class="text-center mb-16">
+<h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Local and International Presence</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+<p class="text-white text-lg max-w-3xl mx-auto">With operations in different countries, we deliver excellence worldwide.</p>
+</div>
+<div class="relative h-[500px] !rounded-lg overflow-hidden border border-primary/30">
+<div class="absolute inset-0 flex items-center justify-center">
+<img src="https://www.wpmap.org/wp-content/uploads/2015/11/google-maps-mm.png" alt="Global Map" class="w-full h-full object-cover">
+</div>
+<div class="absolute inset-0 bg-black/50"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center max-w-2xl px-6">
+<h3 class="text-primary text-2xl font-bold mb-4">Strategic Global Network</h3>
+<p class="text-white mb-8">Our extensive network of offices, warehouses, and partners enables us to provide seamless logistics solutions across continents.</p>
+<!--
+<button onclick="openModal()" class="bg-primary text-white px-4 py-2 rounded hover:bg-primary/90">
+  View Office Location
+</button>
+-->
+
+<!-- MODAL BACKDROP -->
+<div id="locationModal" class="modal hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-xl p-6 w-full max-w-md relative">
+    <!-- Added max-height and overflow-y for scrolling -->
+    <ul class="list-disc pl-5 space-y-2 text-gray-700" style="max-height: 300px; overflow-y: scroll;">
+      <h2 class="text-xl font-semibold mb-4">Office Location</h2>
+      
+      <li>Kaypian SJDM</li>
+     
+    <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-black">
+  <div class="container mx-auto px-6 md:px-12">
+    <div class="text-center mb-16">
+      <h2 class="text-primary text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+      <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+      <p class="text-white text-lg max-w-3xl mx-auto">Get in touch with our team to discuss your logistics needs.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-primary text-2xl font-bold mb-6">Message Us Now.</h3>
+
+        <!-- ✅ THIS IS YOUR CONTACT FORM -->
+        <form id="contactForm" action="send-email.php" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="name" class="block text-white mb-2">Full Name</label>
+              <input type="text" name="name" id="name" class="w-full bg-black border border-primary/30 text-white p-3 rounded-lg focus:border-primary" placeholder="Name"required>
+            </div>
+            <div>
+              <label for="email" class="block text-white mb-2">Email Address</label>
+              <input type="email" name="email" id="email" class="w-full bg-black border border-primary/30 text-white p-3 rounded-lg focus:border-primary" placeholder="email@example.com" required>
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block text-white mb-2">Message</label>
+            <textarea name="message" id="message" rows="5" class="w-full bg-black border border-primary/30 text-white p-3 rounded-lg focus:border-primary" placeholder="Tell us about your logistics needs..." required></textarea>
+          </div>
+          <button id="submitBtn" type="submit" class="bg-primary text-secondary px-8 py-3 rounded-button font-semibold hover:bg-primary/90 transition whitespace-nowrap">Send Message</button>
+        </form>
+</div>
+<div>
+<h3 class="text-primary text-2xl font-bold mb-6">Contact Information</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Office Location</h4>
+<p class="text-white/80">BLOCK 28 LOT 29 CARISSA 5A<br>SAN JOSE DEL MONTE BULACAN</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Phone</h4>
+<p class="text-white/80">09637391581</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Email</h4>
+<p class="text-white/80">alcalogiserv@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<h4 class="text-white font-semibold mb-1">Business Hours</h4>
+<p class="text-white/80">Monday - Friday: 9:00 AM - 6:00 PM</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="text-white font-semibold mb-4">Connect With Us</h4>
+<div class="flex space-x-4">
+<a href="https://www.facebook.com/profile.php?id=61562491764841" target="_blank" class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center hover:bg-primary/20 transition">
+<i class="ri-facebook-fill text-primary"></i>
+</a>                                                                                                                                                                 
+<a href="#" class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center hover:bg-primary/20 transition">
+<i class="ri-instagram-fill text-primary"></i>
+</a>
+</div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-16 bg-primary">
+<div class="container mx-auto px-6 md:px-12 text-center">
+<h2 class="text-black text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your Logistics?</h2>
+<br>
+<p class="text-black/80 text-lg mb-8 max-w-3xl mx-auto">Partner with ALCA Logistics for seamless, efficient, and reliable global shipping solutions.</p>
+<div class="flex flex-wrap justify-center gap-4">
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black py-12 border-t border-primary/30">
+<div class="container mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div>
+<div class="flex items-center mb-6">
+<img src="https://static.readdy.ai/image/fbedf968bd2357570a91c0420d071efd/c0de58b508b678cdb641a49e3402e74f.png" alt="ALCA Logistics" class="h-20">
+</div>
+<p class="text-white/70 mb-6">Delivering excellence across local and international with innovative, reliable, and sustainable logistics solutions.</p>
+<div class="flex space-x-4">
+<a href="https://www.facebook.com/profile.php?id=61562491764841" target="_blank" class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center hover:bg-primary/20 transition">
+  <i class="ri-facebook-fill text-primary"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-primary/10 !rounded-full flex items-center justify-center hover:bg-primary/20 transition">
+<i class="ri-instagram-fill text-primary"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-primary font-bold text-xl mb-6">Services</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-white/70 hover:text-primary">Ocean Freight</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Air Freight</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Road Transport</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Warehousing</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Customs Clearance</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Supply Chain Solutions</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-primary font-bold text-xl mb-6">Company</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-white/70 hover:text-primary">About Us</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Our Team</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Careers</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">News & Media</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Sustainability</a></li>
+<li><a href="#" class="text-white/70 hover:text-primary">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-primary font-bold text-xl mb-6">Newsletter</h3>
+<p class="text-white/70 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+<form class="mb-4">
+<div class="flex">
+</div>
+</form>
+<p class="text-white/50 text-sm">By subscribing, you agree to our Privacy Policy.</p>
+</div>
+</div>
+<div class="pt-8 border-t border-primary/20">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-white/50 mb-4 md:mb-0">© 2025 ALCA Logistics. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-white/50 hover:text-primary text-sm">Privacy Policy</a>
+<a href="#" class="text-white/50 hover:text-primary text-sm">Terms of Service</a>
+<a href="#" class="text-white/50 hover:text-primary text-sm">Cookie Policy</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const header = document.querySelector('header');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+header.classList.add('bg-black/95', 'shadow-lg');
+header.classList.remove('bg-secondary');
+} else {
+header.classList.remove('bg-black/95', 'shadow-lg');
+header.classList.add('bg-secondary');
+}
+});
+
+// Mobile menu functionality would go here
+});
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+  // Smooth Scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Sticky header
+  const header = document.querySelector('header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      header.classList.add('bg-black/95', 'shadow-lg');
+      header.classList.remove('bg-secondary');
+    } else {
+      header.classList.remove('bg-black/95', 'shadow-lg');
+      header.classList.add('bg-secondary');
+    }
+  });
+
+  // Modal handlers
+  window.openModal = function () {
+    document.getElementById('locationModal').classList.remove('hidden');
+  }
+
+  window.closeModal = function () {
+    document.getElementById('locationModal').classList.add('hidden');
+  }
+
+  // Overlay handlers
+  const submitBtn = document.getElementById('submitBtn');
+  window.openOverlay = function () {
+    document.getElementById('successOverlay').classList.remove('hidden');
+    // keep button disabled while overlay is showing
+  }
+
+  window.closeOverlay = function () {
+    document.getElementById('successOverlay').classList.add('hidden');
+    submitBtn.disabled = false;
+    submitBtn.innerText = "Send Message";
+  }
+
+  // Form submit
+  const contactForm = document.getElementById('contactForm');
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.innerText = "Sending...";
+
+    const formData = new FormData(this);
+
+    fetch('send-email.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.text())
+    .then(result => {
+      if (result.includes("Message sent successfully")) {
+        openOverlay(); // Show overlay
+        contactForm.reset();
+        // Optional: Auto-close after delay
+        // setTimeout(closeOverlay, 000);
+      } else {
+        alert("❌ Failed: " + result);
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Send Message";
+      }
+    })
+    .catch(error => {
+      alert("Error: " + error);
+      submitBtn.disabled = false;
+      submitBtn.innerText = "Send Message";
+    });
+  });
+});
+</script>
+
+<!-- Success Overlay -->
+<div id="successOverlay" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white p-6 rounded-lg shadow-lg text-center max-w-sm">
+    <h2 class="text-green-600 text-xl font-bold mb-2">✅ Message Sent!</h2>
+    <p class="text-gray-700">Thank you! We’ll get back to you shortly. <br> Please Check Your Provided Email For Our Response.</p>
+    <button onclick="closeOverlay()" class="mt-4 px-4 py-2 bg-primary text-white rounded hover:bg-primary/90">Close</button>
+  </div>
+</div>
+
+</body>
+</html>
